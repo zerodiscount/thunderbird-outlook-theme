@@ -1,13 +1,13 @@
 {
   "manifest_version": 2,
   "name": "O365-Addon",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Outlook style theming and a quick delete button.",
   "author": "Ale\u0161 Agi\u010d",
   "homepage_url": "https://github.com/YOUR_USERNAME/cards-delete-btn",
   "applications": {
     "gecko": {
-      "id": "cards-delete-btn@abtec.si",
+      "id": "o365-addon@zerodiscount.github.io",
       "strict_min_version": "115.0"
     }
   },

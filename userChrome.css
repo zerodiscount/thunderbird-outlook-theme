@@ -1,7 +1,7 @@
 /* Thunderbird userChrome.css for Dark Warning Banner */
 
 /* Target the warning notification banner */
-notification-message[type="warning"] {
+.notification-message[type="warning"] {
     --message-bar-background-color: #121212 !important;
     /* Deep dark gray / nearly black */
     --message-bar-text-color: #E0E0E0 !important;
@@ -10,7 +10,7 @@ notification-message[type="warning"] {
 }
 
 /* Target the Preferences button specifically */
-notification-message[type="warning"] button {
+.notification-message[type="warning"] button {
     background-color: #2b4c6e !important;
     /* Muted blue */
     color: #E0E0E0 !important;
@@ -19,13 +19,13 @@ notification-message[type="warning"] button {
 }
 
 /* Hover state for the button */
-notification-message[type="warning"] button:hover {
+.notification-message[type="warning"] button:hover {
     background-color: #355d87 !important;
     /* Slightly lighter muted blue on hover */
 }
 
 /* Tone down the warning icon to a muted gold so it matches the dark theme */
-notification-message[type="warning"] .notification-message-icon {
+.notification-message[type="warning"] .notification-message-icon {
     fill: #D4A32A !important;
 }
 
