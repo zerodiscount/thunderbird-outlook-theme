@@ -88,3 +88,33 @@
 #folderTree li .icon {
     filter: grayscale(100%) opacity(70%) !important;
 }
+
+/* Aggressive Catch-All for Thunderbird 115 Remote Content / Warning Banners */
+notification[type="warning"],
+notification-message[type="warning"],
+.notification-message[type="warning"],
+.infobar,
+.notificationbox-stack notification {
+    background-color: #121212 !important;
+    color: #E0E0E0 !important;
+    --message-bar-background-color: #121212 !important;
+    --message-bar-text-color: #E0E0E0 !important;
+    border-bottom: 1px solid #2A2A2B !important;
+}
+
+notification[type="warning"] button,
+notification-message[type="warning"] button,
+.notification-message[type="warning"] button,
+.infobar button {
+    background-color: #2b4c6e !important;
+    color: #E0E0E0 !important;
+    border: 1px solid #1f3954 !important;
+    border-radius: 4px !important;
+}
+
+notification[type="warning"] button:hover,
+notification-message[type="warning"] button:hover,
+.notification-message[type="warning"] button:hover,
+.infobar button:hover {
+    background-color: #355d87 !important;
+}
