@@ -1,3 +1,7 @@
+import os
+import zipfile
+
+parent_js_content = """\
 "use strict";
 
 var { ExtensionCommon } = ChromeUtils.importESModule(
@@ -220,3 +224,19 @@ this.cardsDelete = class extends ExtensionCommon.ExtensionAPI {
     };
   }
 };
+"""
+
+with open("src/api/parent.js", "w") as f:
+    f.write(parent_js_content)
+
+print("parent.js generated successfully.")
+
+# Rebuild the ZIP
+with zipfile.ZipFile("thunderbird-outlook-theme.xpi", "w") as zipf:
+    for root, dirs, files in os.walk("src"):
+        for file in files:
+            file_path = os.path.join(root, file)
+            arcname = os.path.relpath(file_path, "src")
+            zipf.write(file_path, arcname)
+
+print("thunderbird-outlook-theme.xpi rebuilt.")
